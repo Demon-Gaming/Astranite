@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Forum</title>
+</head>
+<body>
+  
+    
+  <header>
+    <h1>
+        Forum
+    </h1>
+<nav>
+    <ul>
+      <li><a href="index.html"class = "header-link">Astranite</a></li>
+        <li><a href="Boutique.html" class = "header-link">Boutique d'Astranite</a></li>
+        <li><a href="Forum.html" class = "header-link">Forum</a></li>
+        <li><a href="Actualités.html" class = "header-link">Actualités</a></li>
+        <li><a href="Patch Note.html" class = "header-link">Patch Note</a></li>
+        <li><a href="mailto:dejanmaletic1603@gmail.com" class="link">Contact</a></li>
+    </ul>
+</nav>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #message-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #message-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #message-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #cf0000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <main>
+        <div id="message-container">
+            <ul id="message-list"></ul>
+            <input type="text" id="message-input" placeholder="Ajouter un message...">
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </main>
+
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById('message-input');
+            var messageList = document.getElementById('message-list');
+
+            var messageText = messageInput.value;
+
+            if (messageText.trim() !== '') {
+                var li = document.createElement('li');
+                li.className = 'message';
+                li.textContent = messageText;
+
+                messageList.appendChild(li);
+
+                
+                messageInput.value = '';
+
+                
+                saveMessages();
+            }
+        }
+
+        function saveMessages() {
+            var messageList = document.getElementById('message-list');
+            var messages = [];
+
+            
+            for (var i = 0; i < messageList.children.length; i++) {
+                messages.push(messageList.children[i].textContent);
+            }
+
+            
+            localStorage.setItem('forumMessages', JSON.stringify(messages));
+        }
+
+        function loadMessages() {
+            var messageList = document.getElementById('message-list');
+            var messages = localStorage.getItem('forumMessages');
+
+            if (messages) {
+                
+                messages = JSON.parse(messages);
+                messages.forEach(function (messageText) {
+                    var li = document.createElement('li');
+                    li.className = 'message';
+                    li.textContent = messageText;
+                    messageList.appendChild(li);
+                });
+            }
+        }
+
+        
+        loadMessages();
+    </script>
+    
+
+</body>
+</html>
+
+</header> 
+<footer>
+  <p>&copy; 2023 Astranite. Tous droits réservés.</p>
+</footer>
+</body>
+</html>

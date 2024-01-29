@@ -1,0 +1,174 @@
+nav a {
+    display: block;
+    color: #c10606;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s,transform 0.3s; 
+}
+
+nav a:hover {
+    background-color: #228a20; 
+    color: #cabbd4; 
+    transform: scale(1.1);
+}
+
+h2 {
+    color: yellow;
+}
+
+.section.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.categorie{
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 50px;
+    background-color: hsla(200, 100%, 50%, 0.5);
+    background-color: rgba(0, 110, 255, 0.5);
+    
+    
+}
+
+a{
+    color: red;
+}
+
+.header-link{
+color: gold;
+text-decoration: double;
+}
+
+
+
+
+.classement-container {
+    float: left;
+    width: 200px;
+    padding: 20px;
+    background-color:crimson;
+border: color(srgb red green blue);    
+margin-right: 20px;
+}
+
+.classement {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.classement-joueurs {
+    margin-bottom: 10px;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:chartreuse;
+    background: linear-gradient(to right, #db3434, #503ce7, #cc2e2e);
+
+}
+
+header {
+    background-color:royalblue;
+    padding: 3px;
+    background: linear-gradient(to right, #db3434, #503ce7, #cc2e2e);   
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:blueviolet;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.presentation {
+    background-color:forestgreen;
+    padding: 20px;
+    background: linear-gradient(to right, #be470c,#9a4410,#019336); 
+}
+
+.patch-note {
+    background-color:dodgerblue;
+    padding: 20px;
+    background: linear-gradient(to right, #3485db, #615baf, #86d177);
+
+}
+
+.boutique {
+    background-color:darkviolet;
+    padding: 20px;
+    background: linear-gradient(to right, #db34ba,#d8386e, #b10a0a);
+
+}
+
+footer {
+    background-color:royalblue;
+    color:gold;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, #db3434, #503ce7, #cc2e2e);
+
+}
+.nav-container {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    color:chartreuse;
+    transition: background-color 0.3s,transform 0.3s; 
+}
+h1:hover{
+    transform: scale(1.5);
+
+}
+.link{
+    color: gold;
+}
+
+
+
+
+
